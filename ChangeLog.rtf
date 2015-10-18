@@ -1,0 +1,261 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green116\blue0;}
+\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\deftab529
+\pard\tx529\pardeftab529\pardirnatural
+
+\f0\fs22 \cf2 \CocoaLigature0 //\cf0 \
+\cf2 //  ChangeLog.rtf\cf0 \
+\cf2 //  WellDine\
+//  Copyright (C) 2013 by Felix Xiao\cf0 \
+\cf2 //  Created by Felix Xiao on 12/16/2012\
+//  
+\f1\fs24 \cf0 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab529\pardirnatural
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab529\pardirnatural
+
+\b \cf0 \ul \ulc0 Future Features
+\b0 \ulnone \
+1. Download viewed MySQL data to local SQLite. ("JerseyGenius","Reachability")\
+-Option to save accessed MySQL data on local device.\
+-Check if internet connection is active and load saved data for venue if internet is not working.\
+-Update local SQLite is internet is connected.\
+-Display notice that the content may not be accurate if internet is not available and local data is used.\
+-Delete and group local data in "Profile" tab.\
+-View saved text driving directions from common locations to common venues.\
+\
+2. User participation incentives. ("ScratchView")\
+-Users can earn free meals and discounts at participating restaurants by earning reputation points.\
+-Users can also earn reputation points by completing challenges and earning medals.\
+-These challenges and medals can be earned by completing advertising offers as well.\
+\
+3. Advertising monetization.\
+-Venues can buy home page feature boxes or have their venue featured in search results when a user is within a certain distance.\
+-Rates are based off the number of times the venue page is viewed from the promoted source.\
+-Limited time specials and deals can be promoted on the home page and on various other places in the app.\
+-iAd program.\
+\
+4. Public transportation alignment.\
+-Implement bus and train routes into search so that venues near or on a route can be found.\
+-Show custom data for venues located inside airports, theme parks, college campuses.\
+\
+5. Item ingredients.\
+-Add ingredients for menu items in a similar fashion as the tags field.\
+-Specify certain ingredients that are given preference or avoided in searches.\
+-Search ingredients and sort results by presence of \
+\
+
+\b \ul Current Goals
+\b0 \ulnone \
+0. Map view searching. ("MapCallouts","Activity Bar")\
+*(DONE) Fetch array of venues and by default, show the ones that are open.\
+*(DONE) Reference with pins of different colored heads. (red=dine in, blue=delivery, green=take out, yellow=drive through). A pin can have a head with 4 different colors depending on what is currently open.\
+-Toolbar with options of showing all venues, even closed ones. Gray heads on pins for closed venues.\
+\
+0. Map view custom annotation. ("MapCallouts","CustomAnnotation")\
+*Venue shows name, address, and disclosure button push segue.\
+*Also shows stars icon and money icon, as well as today's hours.\
+\
+0. Address to latitude/longitude. ("GeoCoder Demo")\
+-Convert from address to location object when inserting a venue.\
+*(DONE) Convert from current location to address and ask for verification when inserting a venue.\
+\
+0. Insert page. ("Horizontal Select","Table Alert","Form Validation","Popover")\
+*(DONE) Change segmented selection control system to the new animated system.\
+-Display errors using the table alert system for fields that were completed incorrectly.\
+-Use popover containing cells in popovers that when selected, update the value of the cell in the form.\
+\
+0. Insert review. ("StarRatings")\
+-Add image-based star rating.\
+\
+1. Dates and times. ("Calendar","PMCalendar")\
+*Configure dates and hours when inserting a venue or menu by setting the same hours for every day or specifying different days.\
+*Add extensive hours table view for venues and menus that shows the next seven days and the times each day that they will be open or available.\
+-Create database table with temporary changes for holiday hours that is checked when determining if the venue or menu is open or available.\
+-Allow restaurant owners and qualified users to add these temporary changes.\
+\
+2. Show when app content is loading. ("HUD Progress Loader","Activity Bar")\
+-Show custom activity progress indicator whenever fetch or insert methods are called.\
+\
+4. Asynchronous fetch. ("Activity Bar")\
+-Load initial view without the data loaded.\
+-Show activity indicator once the fetch process begins.\
+-Send local notification from BaseObject to reload the view and stop the spinner after data is loaded.\
+\
+5. Advanced center button search. ("z-MTPopupView","Modal Popup")\
+-Change gesture recognizer to double tap and add single tap gesture recognizer that runs if double tap is not registered.\
+\
+6. Upload photo to web server. ("File Uploader","z-ASIHTTP","PhotoPicker","InformaticToolbar","ImageEditor")\
+-Upload the picture to the web server and update MySQL with the photo URL.\
+-Show thumbnails that load full image.\
+-Allow zooming and sharing of picture in full view, as well as return to thumbnails.\
+-Show toolbar to allow thumbs up and thumbs down of image.\
+-Crop and edit photo before it is uploaded.\
+\
+7. Search result indirect access and gestures. ("Vertical Swipe")\
+-Add 2 triangular buttons in the navigation bar to change to the next item in the search results.\
+-Add gesture recognizer to do the exact same thing with a 3 finger swipe.\
+\
+8. App customization and uniformity. ("Custom Back Button","Refresh Control")\
+-Replace the items and styles of the default navigation bar.\
+-Replace current refresh method.\
+\
+9. Venue page interactions.\
+-Slide to navigate for iOS 6.0+ users to start navigation in maps app.\
+-Slide for directions for iOS 6.0- users to load directions in maps app.\
+\
+10. Social network elements. ("Instagram Type Notification","Three20","Popover")\
+-Add notification system for users \
+-Create notification table for each event that happens and the user that it applies to.\
+-Implement reputation system for users with special editing privileges and badges that are unlocked by actions worth points.\
+-Users can bookmark venues and create lists that are public or private.\
+-Venues, menus, and items can be shared via social networks, emails, and message.\
+-Add "visited", "liked" on venue and item pages and view a list of these on the profile tab.\
+\
+11. Network connectivity ("Reachability").\
+-Show alerts on the majority of actions or error messages if the network is not available.\
+\
+12. Mobile venues such as food trucks.\
+-Mark venue as mobile in the category section.\
+-Possibly connect the current location to the food truck websites that show where they are.\
+\
+13. Venue activity wall feature.\
+-Create database table that contains all changes to any MySQL table by inserting rows through PHP.\
+-Add table view section that displays recent changes, reviews, photos, and posts by users and owners.\
+-Qualified users may post directly on this wall.\
+\
+14. Venue subscriptions and specials.\
+-Allow logged in users to subscribe to venues in order to receive activity updates, specials, news, and messages from the owner.\
+-Create database table with subscriptions to venues from users.\
+-Count the number of subscribers a venue has and display this in search results and the venue page.\
+-Create database table with specials and deals that can be added by owners and qualified users.\
+-Show number of specials on venue page with page that lists details of each special and when it ends.\
+\
+15. Memory management and performance enhancement.\
+*(DONE) Upgrade to automatic reference counting.\
+-Avoid downloading repetitive data multiple times by storing them in arrays and dictionaries.\
+-Lower photo resolution so that photos do not take a long time to load.\
+-Scale photo resolution before uploading\
+\
+16. Accuracy measures.\
+-Users can verify that a certain value is correct or that is is incorrect so that questionable values are highlighted with a warning sign.\
+-Venues that are added must be verified by a second user before it becomes official, users can confirm venues around them.\
+\
+17. Venue owner dominance.\
+-Venues with active owners that post updates and changes receive a checkmark in search results and on the venue page.\
+-Owners can post responses to restaurant reviews explaining positive or negative feedback.\
+-Owners can correct item information and update any element of their restaurant with menus and items.\
+-Owners can choose the default initial images seen for the restaurant.\
+-Owners can add a logo which will then show up on the map when searching and the menu page.\
+\
+18. Independence from maps app. ("Map Directions","Map Lines","Directions Kit","Map Lines and Annotations")\
+-Show routes in the map view without switching to maps app.\
+-Text driving directions are shown in the map view without switching to maps app.\
+\
+19. Venue linkage.\
+-Verified chain restaurants show reviews, photos, menus, and items from linked venues. This content is labeled with a linked icon.\
+\
+20. Feature priority by owner and users.\
+-The order in which icons appear on the feature scroll view are determined by user voting.\
+-This can be overridden by the restaurant owner.\
+\
+\
+
+\b \ul Images
+\b0 \ulnone \
+1. Venue categories:\
+-Mexican: flag\
+-Chinese: flag\
+-Italian: flag\
+\
+2. Food icons\
+-Spaghetti\
+-Burger\
+-Pizza\
+\
+3. Menu images\
+-Front cover colors:\
+-Front cover icons: \
+\
+4. Feature icons\
+\
+December 29, 2012\
+*Set up all remaining objects and keys for a venue's search results in SearchViewController.\
+\
+December 28, 2012\
+-New MySQL tables on WellDine.com server\
+-InsertViewController creation, linking of preset insert values based on view controller.\
+-Current and future plan organization.\
+-MapViewController and MapViewAnnotation connection to add and show venue on map.\
+-Custom annotation and pins for MapView.\
+\
+December 27, 2012\
+-Property List.plist creation of keys and objects in dictionaries, as well as references to tables.\
+-New MySQL database on WellDine.com server.\
+\
+December 26, 2012\
+-ItemListViewController setup.\
+-ItemDetailViewController setup with IBOutlets, push segue, pass data from ItemListViewController.\
+-Dynamic nutrition facts \
+\
+December 25, 2012\
+-Consolidation of MenuListViewController and MenuViewController.\
+-Default menu image for MenuListView.\
+-MenuListViewController table view setup.\
+-Load venue and menu list from HomeViewController.\
+-Accordion-style featureScrollView function in MenuListViewController.\
+\
+December 24, 2012:\
+-Code cleanup.\
+-Domain acquisitions from Brad Fox and GoDaddy.com.\
+-Domain splash page for WELLDINE.COM.\
+-Domain redirect setup for WELLDINE (BIZ, INFO, MOBI, NET, CO, ORG, ME, US), WILLDINE.COM, WELDINE.COM.\
+-Tentative app icons and logos.\
+-New image for raised center tab button.\
+-Tentative default launch images for all screen sizes.\
+-Refresh ability on all BaseTableViewController pages, setupStrings method can be overridden in subclasses.\
+\
+December 23, 2012:\
+-Domain name work.\
+-Logo work.\
+\
+December 22, 2012:\
+-Add MTPopupWindow to app.\
+-KeyChainItemWrapper and ViewController for very first launch of app.\
+-Set username for BaseViewController, BaseTableViewController as "Guest" if not logged in, as KeychainItem if logged in.\
+\
+December 21, 2012:\
+-Set up array values for a venue's photos, reviews, menus, and items.\
+-Row number badges for venue information.\
+-Pull to refresh and show all features.\
+-Raised center button responds to long press.\
+\
+December 20, 2012\
+-FeatureScrollView images.\
+-VenueViewController 5-row venue information setup.\
+\
+December 19, 2012\
+-SearchViewController searches tags of venues table and displays results after concrete 3 second delay.\
+-Communication between SearchViewController and VenueViewController\
+-VenueViewController 4-Button PrettyKit setup.\
+\
+December 18, 2012\
+-JSon fetch post from database.\
+-Deletion of all NSObject subclasses other than BaseObject.\
+\
+December 17, 2012\
+-BaseObject: insert to database, fetch from database, log properties.\
+-Venue: create from database (very slow because synchronous, change in future), add to database, log properties.\
+\
+December 16, 2012\
+-ASIHTTPRequest, Reachability inclusion.\
+-First working ASIHTTPFormRequest.\
+\
+December 15, 2012\
+-CustomTabBarController setup with raised center UIButton image.\
+-UINavigationController push segue setup.\
+-BaseObject, Venue, Profile, Photo, Review, Menu, Item, Nutrition class properties.\
+-BaseViewController, BaseTableViewController, HomeViewController, SearchViewController, FindViewController creation.\
+-PrettyKit inclusion.}

@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>VenueViewController venueData</key>
+	<dict>
+		<key>venueID</key>
+		<string>int, venues table index 0, AUTO INCREMENT</string>
+		<key>menuID</key>
+		<string>int, venues table index 1, ALWAYS -1</string>
+		<key>userID</key>
+		<string>int, venues table index 2, set on INSERT, automatic based on logged in user</string>
+		<key>reviewID</key>
+		<string>int, venues table index 3, ALWAYS -1</string>
+		<key>photoID</key>
+		<string>int, venues table index 4, ALWAYS -1</string>
+		<key>itemID</key>
+		<string>int, venues table index 5, ALWAYS -1</string>
+		<key>name</key>
+		<string>vc50, venues table index 6, set on INSERT, REQUIRED</string>
+		<key>tags</key>
+		<string>vc200, venues table index 7, set on INSERT, some tags added automatically</string>
+		<key>address</key>
+		<string>vc100, venues table index 8, set on INSERT, REQUIRED</string>
+		<key>physical</key>
+		<string>vc500, venues table index 9, set on INSERT</string>
+		<key>phone</key>
+		<string>vc20, venues table index 10, set on INSERT</string>
+		<key>weburl</key>
+		<string>vc200, venues table index 11, set on INSERT</string>
+		<key>parking</key>
+		<string>vc500, venues table index 12, set on INSERT</string>
+		<key>location</key>
+		<string>tentative vc500, venues table index 13, set on INSERT, REQUIRED</string>
+		<key>status</key>
+		<string>&quot;open&quot; or &quot;closed&quot;, set dynamically in code</string>
+		<key>minutes</key>
+		<string>int, set dynamically in code, number of minutes away from user location</string>
+		<key>dollars</key>
+		<string>double, venues table index 14, set on INSERT, REQUIRED</string>
+		<key>ups</key>
+		<string>int, venues table index 15, DEFAULT 0, set when users vote</string>
+		<key>downs</key>
+		<string>int, venues table index 16, DEFAULT 0, set when users vote</string>
+		<key>percent</key>
+		<string>int, set dynamically in code based on keys &quot;ups&quot; and &quot;downs&quot;</string>
+		<key>stars</key>
+		<string>int, set dynamically in code based on VenueViewController reviews</string>
+		<key>category</key>
+		<string>vc200, venues table index 17, set on INSERT, REQUIRED</string>
+		<key>timestamp</key>
+		<string>int, venues table index 18, set on INSERT in PHP code</string>
+		<key>lastupdated</key>
+		<string>int, venues table index 19, set on INSERT in PHP code</string>
+		<key>lowfat</key>
+		<string>int, set dynamically in code</string>
+		<key>nofat</key>
+		<string>int, set dynamically in code</string>
+		<key>lowcarb</key>
+		<string>int, set dynamically in code</string>
+		<key>nocarb</key>
+		<string>int, set dynamically in code</string>
+		<key>lowcalorie</key>
+		<string>int, set dynamically in code</string>
+		<key>nocalorie</key>
+		<string>int, set dynamically in code</string>
+		<key>lowsodium</key>
+		<string>int, set dynamically in code</string>
+		<key>nosodium</key>
+		<string>int, set dynamically in code</string>
+		<key>lowcholesterol</key>
+		<string>int, set dynamically in code</string>
+		<key>nocholesterol</key>
+		<string>int, set dynamically in code</string>
+		<key>lowsugar</key>
+		<string>int, set dynamically in code</string>
+		<key>nosugar</key>
+		<string>int, set dynamically in code</string>
+		<key>highprotein</key>
+		<string>int, set dynamically in code</string>
+		<key>highfiber</key>
+		<string>int, set dynamically in code</string>
+		<key>highiron</key>
+		<string>int, set dynamically in code</string>
+		<key>highcalcium</key>
+		<string>int, set dynamically in code</string>
+		<key>glutenfree</key>
+		<string>int, set dynamically in code</string>
+		<key>peanutfree</key>
+		<string>int, set dynamically in code</string>
+		<key>milkfree</key>
+		<string>int, set dynamically in code</string>
+		<key>eggfree</key>
+		<string>int, set dynamically in code</string>
+		<key>nutfree</key>
+		<string>int, set dynamically in code</string>
+		<key>soyfree</key>
+		<string>int, set dynamically in code</string>
+		<key>vegetarian</key>
+		<string>int, set dynamically in code</string>
+		<key>vegan</key>
+		<string>int, set dynamically in code</string>
+		<key>kosher</key>
+		<string>int, set dynamically in code</string>
+		<key>porkfree</key>
+		<string>int, set dynamically in code</string>
+		<key>organic</key>
+		<string>int, set dynamically in code</string>
+		<key>localingredients</key>
+		<string>int, set dynamically in code</string>
+	</dict>
+	<key>VenueViewController venueFeatures</key>
+	<dict>
+		<key>venueID</key>
+		<string>int, features table index 0, AUTO INCREMENT, set on INSERT</string>
+		<key>dineintimes</key>
+		<string>tentative vc100, features table index 1, set on INSERT, REQUIRED</string>
+		<key>takeouttimes</key>
+		<string>tentative vc100, features table index 2, set on INSERT, REQUIRED</string>
+		<key>deliverytimes</key>
+		<string>tentative vc100, features table index 3, set on INSERT, REQUIRED</string>
+		<key>studentdiscount</key>
+		<string>vc200, features table index 4, DEFAULT &quot;no&quot;, set on INSERT</string>
+		<key>tender</key>
+		<string>vc200, features table index 5, set on INSERT</string>
+		<key>alcohol</key>
+		<string>vc200, features table index 6, DEFAULT &quot;no&quot;, set on INSERT</string>
+		<key>goodforkids</key>
+		<string>int (boolean), features table index 7, DEFAULT -1, set on INSERT</string>
+		<key>attire</key>
+		<string>vc20, features table index 8, set on INSERT</string>
+		<key>goodforgroups</key>
+		<string>int (boolean), features table index 9, DEFAULT -1, set on INSERT</string>
+		<key>reservations</key>
+		<string>int (boolean), features table index 10, DEFAULT -1, set on INSERT</string>
+		<key>waiters</key>
+		<string>int (boolean), features table index 11, DEFAULT -1, set on INSERT</string>
+		<key>wifi</key>
+		<string>int (boolean), features table index 12, DEFAULT -1, set on INSERT</string>
+		<key>outdoorseating</key>
+		<string>int (boolean), features table index 13, DEFAULT -1, set on INSERT</string>
+		<key>noiselevel</key>
+		<string>int (1-10), features table index 14, DEFAULT -1, set on INSERT with UISlider</string>
+		<key>ambience</key>
+		<string>vc20, features table index 15, set on INSERT</string>
+		<key>tvs</key>
+		<string>int, features table index 16, set on INSERT</string>
+		<key>music</key>
+		<string>vc20, features table index 17, set on INSERT</string>
+		<key>bestnights</key>
+		<string>vc50, features table index 18, set on INSERT</string>
+		<key>happyhour</key>
+		<string>tentative vc100, features table index 19, set on INSERT</string>
+		<key>smoking</key>
+		<string>vc20, features table index 20, set on INSERT</string>
+		<key>coatcheck</key>
+		<string>int (boolean), features table index 21, DEFAULT -1, set on INSERT</string>
+		<key>goodfordancing</key>
+		<string>int (boolean), features table index 22, DEFAULT -1, set on INSERT</string>
+		<key>catering</key>
+		<string>int (boolean), features table index 23, DEFAULT -1, set on INSERT</string>
+		<key>wheelchair</key>
+		<string>int (boolean), features table index 24, DEFAULT -1, set on INSERT</string>
+		<key>bathrooms</key>
+		<string>int (boolean), features table index 25, DEFAULT -1, set on INSERT</string>
+		<key>seniordiscount</key>
+		<string>vc200, features table index 26, DEFAULT &quot;no&quot;, set on INSERT</string>
+		<key>childdiscount</key>
+		<string>vc200, features table index 27, DEFAULT &quot;no&quot;, set on INSERT</string>
+		<key>playground</key>
+		<string>int (boolean), features table index 28, DEFAULT -1, set on INSERT</string>
+		<key>drivethroughtimes</key>
+		<string>tentative vc100, features table index 29, set on INSERT, REQUIRED</string>
+		<key>capacity</key>
+		<string>int, features table index 30, DEFAULT -1, set on INSERT</string>
+		<key>waittime</key>
+		<string>int, features table index 31, DEFAULT -1, set on INSERT</string>
+		<key>freewater</key>
+		<string>int (boolean), features table index 32, DEFAULT -1, set on INSERT </string>
+		<key>freefood</key>
+		<string>vc100 (like chips or breadsticks), features table index 33, DEFAULT &quot;no&quot;, set on INSERT</string>
+		<key>freerefills</key>
+		<string>int (boolean), features table index 34, DEFAULT -1, set on INSERT</string>
+		<key>tipexpected</key>
+		<string>int (boolean), features table index 35, DEFAULT -1, set on INSERT</string>
+		<key>renovation</key>
+		<string>int (boolean), features table index 36, DEFAULT 0, set on INSERT</string>
+		<key>sports</key>
+		<string>int (boolean), features table index 37, DEFAULT -1, set on INSERT</string>
+		<key>outsidefoodwelcome</key>
+		<string>int (boolean), features table index 38, DEFAULT 0, set on INSERT</string>
+		<key>emailaddress</key>
+		<string>vc100, features table index 39, set on INSERT</string>
+		<key>facebook</key>
+		<string>vc100, features table index 40, set on INSERT</string>
+		<key>twitter</key>
+		<string>vc100, features table index 41, set on INSERT</string>
+	</dict>
+	<key>VenueViewController reviews</key>
+	<array>
+		<dict/>
+	</array>
+	<key>VenueViewController photos</key>
+	<array>
+		<dict/>
+	</array>
+	<key>VenueViewController menus</key>
+	<array>
+		<dict/>
+	</array>
+	<key>VenueViewController items</key>
+	<array>
+		<dict/>
+	</array>
+	<key>MenuListViewController menus</key>
+	<array>
+		<dict/>
+	</array>
+	<key>MenuListViewController menuPhotos</key>
+	<array>
+		<dict/>
+	</array>
+	<key>MenuListViewController menuReviews</key>
+	<array>
+		<dict/>
+	</array>
+	<key>MenuListViewController menuItems</key>
+	<array>
+		<dict/>
+	</array>
+	<key>MenuListViewController menus:objectAtIndex:</key>
+	<dict>
+		<key>venueID</key>
+		<string>int, menus table index 0, set on INSERT, REQUIRED</string>
+		<key>menuID</key>
+		<string>int, menus table index 1, AUTO INCREMENT</string>
+		<key>userID</key>
+		<string>int, menus table index 2, set on INSERT, automatic based on logged in user</string>
+		<key>reviewID</key>
+		<string>int, menus table index 3, ALWAYS -1</string>
+		<key>photoID</key>
+		<string>int, menus table index 4, set on INSERT</string>
+		<key>itemID</key>
+		<string>int, menus table index 5, ALWAYS -1</string>
+		<key>name</key>
+		<string>vc50, menus table index 6, set on INSERT, REQUIRED</string>
+		<key>tags</key>
+		<string>vc200, menus table index 7, set on INSERT, some tags added automatically</string>
+		<key>active</key>
+		<string>int (boolean), menus table index 8 , DEFAULT 1, set on INSERT, REQUIRED</string>
+		<key>start</key>
+		<string>tentative vc100, menus table index 9, set on INSERT</string>
+		<key>end</key>
+		<string>tentative vc100, menus table index 10, set on INSERT</string>
+		<key>mainImage</key>
+		<string>vc200, menus table index 11, set on INSERT</string>
+		<key>timestamp</key>
+		<string>int, menus table index 12, set on INSERT in PHP code</string>
+		<key>lastupdated</key>
+		<string>int, menus table index 13, set on INSERT in PHP code</string>
+		<key>cheapItem</key>
+		<string>double, set dynamically in code</string>
+		<key>expensiveItem</key>
+		<string>double, set dynamically in code</string>
+		<key>averageItemReview</key>
+		<string>double, set dynamically in code</string>
+		<key>lowfat</key>
+		<string>int, set dynamically in code</string>
+		<key>nofat</key>
+		<string>int, set dynamically in code</string>
+		<key>lowcarb</key>
+		<string>int, set dynamically in code</string>
+		<key>nocarb</key>
+		<string>int, set dynamically in code</string>
+		<key>lowcalorie</key>
+		<string>int, set dynamically in code</string>
+		<key>nocalorie</key>
+		<string>int, set dynamically in code</string>
+		<key>lowsodium</key>
+		<string>int, set dynamically in code</string>
+		<key>nosodium</key>
+		<string>int, set dynamically in code</string>
+		<key>lowcholesterol</key>
+		<string>int, set dynamically in code</string>
+		<key>nocholesterol</key>
+		<string>int, set dynamically in code</string>
+		<key>lowsugar</key>
+		<string>int, set dynamically in code</string>
+		<key>nosugar</key>
+		<string>int, set dynamically in code</string>
+		<key>highprotein</key>
+		<string>int, set dynamically in code</string>
+		<key>highfiber</key>
+		<string>int, set dynamically in code</string>
+		<key>highiron</key>
+		<string>int, set dynamically in code</string>
+		<key>highcalcium</key>
+		<string>int, set dynamically in code</string>
+		<key>glutenfree</key>
+		<string>int, set dynamically in code</string>
+		<key>peanutfree</key>
+		<string>int, set dynamically in code</string>
+		<key>milkfree</key>
+		<string>int, set dynamically in code</string>
+		<key>eggfree</key>
+		<string>int, set dynamically in code</string>
+		<key>nutfree</key>
+		<string>int, set dynamically in code</string>
+		<key>soyfree</key>
+		<string>int, set dynamically in code</string>
+		<key>vegetarian</key>
+		<string>int, set dynamically in code</string>
+		<key>vegan</key>
+		<string>int, set dynamically in code</string>
+		<key>kosher</key>
+		<string>int, set dynamically in code</string>
+		<key>porkfree</key>
+		<string>int, set dynamically in code</string>
+		<key>organic</key>
+		<string>int, set dynamically in code</string>
+		<key>localingredients</key>
+		<string>int, set dynamically in code</string>
+	</dict>
+	<key>MenuListViewController menuPhotos:objectAtIndex:</key>
+	<dict>
+		<key>venueID</key>
+		<string>int, photos table index 0, set on INSERT, REQUIRED</string>
+		<key>menuID</key>
+		<string>int photos table index 1, set on INSERT</string>
+		<key>userID</key>
+		<string>int, photos table index 2, set on INSERT, automatic based on logged in user</string>
+		<key>reviewID</key>
+		<string>int, photos table index 3, set on INSERT</string>
+		<key>photoID</key>
+		<string>int, photos table index 4, AUTO INCREMENT</string>
+		<key>itemID</key>
+		<string>int, photos table index 5, set on INSERT</string>
+		<key>description</key>
+		<string>vc100, photos table index 6, set on INSERT</string>
+		<key>photourl</key>
+		<string>vc200, photos table index 7, set on INSERT, REQUIRED</string>
+		<key>ups</key>
+		<string>int, photos table index 8, DEFAULT 0, set on user thumbs up</string>
+		<key>downs</key>
+		<string>int, photos table index 9, DEFAULT 0, set on user thumbs up</string>
+		<key>timestamp</key>
+		<string>int, photos table index 10, set on INSERT in PHP code</string>
+	</dict>
+	<key>MenuListViewController menuReviews:objectAtIndex:</key>
+	<dict>
+		<key>venueID</key>
+		<string>int, reviews table index 0, set on INSERT, REQUIRED</string>
+		<key>menuID</key>
+		<string>int reviews table index 1, set on INSERT</string>
+		<key>userID</key>
+		<string>int, reviews table index 2, set on INSERT, automatic based on logged in user</string>
+		<key>reviewID</key>
+		<string>int, reviews table index 3, AUTO INCREMEMENT</string>
+		<key>photoID</key>
+		<string>int, reviews table index 4, set on INSERT</string>
+		<key>itemID</key>
+		<string>int, reviews table index 5, set on INSERT</string>
+		<key>title</key>
+		<string>vc50, reviews table index 6, set on INSERT, REQUIRED</string>
+		<key>description</key>
+		<string>vc1000, reviews table index 7, set on INSERT, REQUIRED</string>
+		<key>stars</key>
+		<string>double, reviews table index 8, set on INSERT, REQUIRED</string>
+		<key>waittime</key>
+		<string>int, reviews table index 9, DEFAULT -1, set on INSERT, REQUIRED</string>
+		<key>ups</key>
+		<string>int, reviews table index 10, DEFAULT 0, set on user thumbs up</string>
+		<key>downs</key>
+		<string>int, reviews table index 11, DEFAULT 0, set on user thumbs down</string>
+		<key>timestamp</key>
+		<string>int, reviews table index 12, set on INSERT in PHP code</string>
+	</dict>
+	<key>MenuListViewController menuItems:objectAtIndex:</key>
+	<dict>
+		<key>venueID</key>
+		<string>int, items table index 0, set on INSERT, REQUIRED</string>
+		<key>menuID</key>
+		<string>int items table index 1, set on INSERT</string>
+		<key>userID</key>
+		<string>int, items table index 2, set on INSERT, automatic based on logged in user</string>
+		<key>reviewID</key>
+		<string>int, items table index 3, ALWAYS -1</string>
+		<key>photoID</key>
+		<string>int, items table index 4, ALWAYS -1</string>
+		<key>itemID</key>
+		<string>int, items table index 5, AUTO INCREMENT</string>
+		<key>name</key>
+		<string>vc50, items table index 6, set on INSERT, REQUIRED</string>
+		<key>description</key>
+		<string>vc500, items table index 7, set on INSERT</string>
+		<key>price</key>
+		<string>double, items table index 8, set on INSERT, REQUIRED</string>
+		<key>saleprice</key>
+		<string>double, items table index 9, set on INSERT</string>
+		<key>onsale</key>
+		<string>int (boolean), items table index 10, DEFAULT 0, set on INSERT</string>
+		<key>glutenfree</key>
+		<string>int (boolean), items table index 11, DEFAULT -1, set on INSERT</string>
+		<key>peanutfree</key>
+		<string>int (boolean), items table index 12, DEFAULT -1, set on INSERT</string>
+		<key>milkfree</key>
+		<string>int (boolean), items table index 13, DEFAULT -1, set on INSERT</string>
+		<key>eggfree</key>
+		<string>int (boolean), items table index 14, DEFAULT -1, set on INSERT</string>
+		<key>nutfree</key>
+		<string>int (boolean), items table index 15, DEFAULT -1, set on INSERT</string>
+		<key>soyfree</key>
+		<string>int (boolean), items table index 16, DEFAULT -1, set on INSERT</string>
+		<key>vegetarian</key>
+		<string>int (boolean), items table index 17, DEFAULT -1, set on INSERT</string>
+		<key>vegan</key>
+		<string>int (boolean), items table index 18, DEFAULT -1, set on INSERT</string>
+		<key>kosher</key>
+		<string>int (boolean), items table index 19, DEFAULT -1, set on INSERT</string>
+		<key>porkfree</key>
+		<string>int (boolean), items table index 20, DEFAULT -1, set on INSERT</string>
+		<key>organic</key>
+		<string>int (boolean), items table index 21, DEFAULT -1, set on INSERT</string>
+		<key>localingredients</key>
+		<string>int (boolean), items table index 22, DEFAULT -1, set on INSERT</string>
+		<key>calories</key>
+		<string>int, items table index 23, DEFAULT -1, set on INSERT</string>
+		<key>fat</key>
+		<string>int, items table index 24, DEFAULT -1, set on INSERT</string>
+		<key>satfat</key>
+		<string>int, items table index 25, DEFAULT -1, set on INSERT</string>
+		<key>transfat</key>
+		<string>int, items table index 26, DEFAULT -1, set on INSERT</string>
+		<key>cholesterol</key>
+		<string>int, items table index 27, DEFAULT -1, set on INSERT</string>
+		<key>sodium</key>
+		<string>int, items table index 28, DEFAULT -1, set on INSERT</string>
+		<key>carbs</key>
+		<string>int, items table index 29, DEFAULT -1, set on INSERT</string>
+		<key>fiber</key>
+		<string>int, items table index 30, DEFAULT -1, set on INSERT</string>
+		<key>sugars</key>
+		<string>int, items table index 31, DEFAULT -1, set on INSERT</string>
+		<key>protein</key>
+		<string>int, items table index 32, DEFAULT -1, set on INSERT</string>
+		<key>iron</key>
+		<string>int, items table index 33, DEFAULT -1, set on INSERT</string>
+		<key>calcium</key>
+		<string>int, items table index 34, DEFAULT-1, set on INSERT</string>
+	</dict>
+</dict>
+</plist>
